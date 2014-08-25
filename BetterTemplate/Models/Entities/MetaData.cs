@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
@@ -56,6 +57,10 @@ namespace BetterTemplate.Models.Entities
 			}
 		}
 
+		/// <summary>
+		/// An Audit Trail for the Object
+		/// </summary>
+		public virtual ICollection<Audit> Audits { get; private set; }
 
 		/// <summary>
 		/// Default Constructor for MetaData.
